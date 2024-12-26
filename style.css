@@ -1,0 +1,214 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gilroy', sans-serif;
+    color: white;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+nav{
+    position: fixed;
+    text-transform: uppercase;
+    background-color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5vw 11vw;
+    width: 100vw;
+    height: 12vh;
+    /* background-color: #94a30d; */
+    /* overflow-y: hidden; */
+}
+nav h1{
+    font-size: 2vw;
+}
+.nav-part2{
+    display: flex;
+    gap: 1vw;
+    align-items: flex-start;
+    padding: 1vh 0;
+    position: relative;
+    z-index: 10;
+    /* background-color: aqua; */
+}
+
+.nav-part2 h4{
+    font-weight: 400;
+    font-size: 1vw;
+    text-transform: uppercase;
+    margin-bottom: 2vw;
+    cursor: pointer;
+    height: 2vw;
+}
+.nav-part2 h5{
+    margin-bottom: 1vw;
+    display: none;
+    overflow-y: hidden;
+    cursor: pointer;
+}
+
+.nav-part2 h5 span{
+    font-weight: 400;
+    font-size: 0.9vw;
+    text-transform: capitalize;
+    display: inline-block;
+    padding-left: 0.2vw;
+    transform: translateY(25px);
+}
+#nav-bottom{
+    border-bottom: 2px solid #dadada;
+    height: 0vh;
+    width: 78%;
+    position: absolute;
+    top: 100%;
+    transition: all ease 0.5s;
+    z-index: 9;
+    background-color: #111;
+}
+
+.bottom-div{
+    /* background-color: #0DA34E; */
+}
+.bottom-div h5{
+    font-weight: 100;
+    margin-bottom: 1.1vw;
+    cursor: pointer;
+}
+nav button{
+    background-color: #0DA34E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5vw 1vw;
+    gap: 2vw;
+    border-radius: 3vw;
+    border: 0;
+    text-transform: uppercase;
+    font-size: 1vw;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#page1 h1{
+    text-transform: uppercase;
+    font-size: 8vw;
+    line-height: 8vw;
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+}
+#page1 span{
+    width: 6vw;  
+    height: 6vw;  
+    border-radius: 50%;  
+    background-color: #0DA34E;  
+    display: flex;  
+    justify-content: center;  
+    align-items: center;
+}
+
+#page1 p{
+    text-align: center;
+    font-weight: 400;
+    margin-top: 30px;
+}
+#page1-tags{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    margin-top: 20px;
+    gap: 10px;
+}
+#page1-tags h4{
+    font-weight: 400;
+    font-size: 1.12vw;
+    border: 1px solid white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+#page1-tags h4:nth-last-child(2){
+    color: #0DA34E;
+    background-color: #0da34e25;
+    cursor: auto;
+    border-color: #0DA34E;
+}
+
+#moving-div{
+    /* background-color: rebeccapurple; */
+    position: absolute;
+    bottom: 0vh;
+    width: 50%;
+    padding: 1vw;
+    display: flex;
+    gap: 2vw;
+    white-space: nowrap;
+    overflow-x: hidden;
+}
+#moving-div .move{
+    height: 4vw;
+    display: inline-flex;
+    justify-content: space-evenly;
+    gap: 2vw;
+    align-items: center;
+    animation-name: moveX;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+#moving-div .move img{
+    height: 1.2vw;
+    margin: 0 .1vw;
+}
+#moving-div #blur-left{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to left, transparent,#111);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    overflow-y:  hidden;
+}
+#moving-div #blur-right{
+    height: 100%;
+    width: 20%;
+    background: linear-gradient(to left,#111, transparent);
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+    overflow-y:  hidden;
+}
+
+@keyframes moveX {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-100%);
+    }
+}
+
+
+#page2{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+}
