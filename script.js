@@ -104,13 +104,37 @@ function page2Right() {
         })
     })
 }
+function page3VideoAnimation() {
+    var page3Center = document.querySelector(".page3-center .icon")
+    var video = document.querySelector("#page3 video")
+    page3Center.addEventListener("click", function () {
+        video.play();
+        gsap.to(video, {
+            transform: "scaleX(1) scaleY(1)",
+            // opacity: 1,
+            borderRadius: 0,
+            duration: 1.5,
+            ease: "circ.out",
+        })
+    })
+    video.addEventListener("click", function () {
+        video.pause();
+        gsap.to(video, {
+            transform: "scaleX(0.7) scaleY(0)",
+            // opacity: ,
+            borderRadius: "30px",
+            // x: 100,
+            // y: 100,
+            duration: 1,
+            ease: "circ.out",
+        })
+    })
+}
 
 
 
 
-
-
-
+page3VideoAnimation();
 page2Right();
 page2Left();
 pencilLogoAnimation();

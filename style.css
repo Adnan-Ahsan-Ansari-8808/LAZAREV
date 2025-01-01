@@ -268,3 +268,63 @@ nav button{
     opacity: 0;
 }
 
+
+#page3{
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    background-image: url(image/page3.webp);
+    position: relative;
+    background-size: 125%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#page3 video{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    object-fit: cover;
+    transform: scaleX(0.7) scaleY(0);
+    border-radius: 30px;
+    z-index: 99;
+}
+.page3-center {
+    /* background-color: #0DA34E; */
+    border-radius: 50px;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.8vw;
+}
+.page3-center .icon{
+    background-color: white;
+    padding: 3.3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    
+}
+.page3-center .icon i{
+    font-size: 2vw;
+    color: black;
+}
+.page3-center h5{
+    font-size: 1vw;
+    background-color: white;
+    color: black;
+    padding: 0.5vw 1vw;
+    border-radius: 2vw;
+    text-transform: uppercase;
+    opacity: 0;
+    transform: translateY(20%);
+    transition: all ease 0.5s;
+}
+.page3-center:hover h5{
+    opacity: 1;
+    transform: translateY(0%);
+}
