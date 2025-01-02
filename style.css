@@ -21,8 +21,8 @@ nav{
     padding: 1.5vw 11vw;
     width: 100vw;
     height: 12vh;
-    /* opacity: 0.5; */
     z-index: 3;
+    /* opacity: 0.5; */
 }
 nav h1{
     font-size: 2vw;
@@ -71,9 +71,6 @@ nav h1{
     background-color: #111;
 }
 
-.bottom-div{
-    /* background-color: #0DA34E; */
-}
 .bottom-div h5{
     font-weight: 100;
     margin-bottom: 1.1vw;
@@ -327,4 +324,86 @@ nav button{
 .page3-center:hover h5{
     opacity: 1;
     transform: translateY(0%);
+}
+
+#page4{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10vw 6vw ;
+}
+.page4-left{
+    width: 35%;
+    height: auto;
+    /* background-color: #0DA34E; */
+    
+}
+.page4-left h1{
+    color: black;
+    font-size: 3.4vw;
+    line-height: 3.4vw;
+    text-transform: uppercase;
+    font-weight: 600;
+    overflow: hidden;
+}
+.page4-left h1 span{
+    color: black;
+    text-transform: capitalize;
+}
+.page4-right{
+    width: 50%;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    gap: 4vw;
+}
+
+.page4-right p{
+    color: #b1b1b1;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-decoration: underline;
+}
+.page4-right .detail{
+    font-size: 1.5vw;
+    margin-top: 2vw;
+    color: black;
+}
+
+#page5{
+    width: 100%;
+    height: 80vh;
+    position: relative;
+    padding: 0 6vw 5vw 6vw ;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.7vw;
+}
+#page5 .elem{
+    position: relative;
+    width: auto;
+    height: auto;
+    padding: 2vw 2vw;
+    border-radius: 1vw;
+    background-color: #f0efef;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#page5 .elem h1{
+    color: black;
+    font-size: 3vw;
+    text-transform: capitalize;
+}
+#page5 .elem p{
+    color:#424242;
+}
+#page5 .elem .num{
+    color:#696969;
+    position: absolute;
+    bottom: 2vw;
+    right: 2vw;
 }

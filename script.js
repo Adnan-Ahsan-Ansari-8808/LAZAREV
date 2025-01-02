@@ -130,10 +130,47 @@ function page3VideoAnimation() {
         })
     })
 }
+function textBreaker(targetSelector) {
+    var targetElement = document.querySelector(targetSelector)
+    if (!targetElement) {
+        console.log(`Target Element: ${targetSelector} not found!!`);
+    }
+    var targetElementText = targetElement.innerHTML;
+    var splittedText = targetElementText.split("")
+    var wrappedText = ""
+    splittedText.forEach(function (elem) {
+        // console.log(elem);
+        wrappedText += `<span>${elem}</span>`
+    })
+    targetElement.innerHTML = wrappedText;
+    // console.log(targetElement);
+    gsap.from(`${targetSelector} span`, {
+        // y:100,
+        opacity: 0.3,
+        stagger: 0.25,
+        scrollTrigger: {
+            scroller: "body",
+            trigger: "#page4",
+            // markers: true,
+            start: "top 70%",
+            end: "top 45%",
+            scrub: 2,
+        }
+    })
+}
+
+var elems = document.querySelectorAll(".elem")
+
+elems.forEach(function (elem, index) {
+    var numDiv = elem.querySelector(".num")
+    
+
+        numDiv.textContent =  "/00"+ (index+1);
+})
 
 
 
-
+textBreaker(".page4-left h1");
 page3VideoAnimation();
 page2Right();
 page2Left();
