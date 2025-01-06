@@ -158,18 +158,53 @@ function textBreaker(targetSelector) {
         }
     })
 }
+function autoCount(targetSelector){
+    var elems = document.querySelectorAll(targetSelector)
 
-var elems = document.querySelectorAll(".elem")
+    elems.forEach(function (elem, index) {
+        var numDiv = elem.querySelector(".num")
 
-elems.forEach(function (elem, index) {
-    var numDiv = elem.querySelector(".num")
-    
 
-        numDiv.textContent =  "/00"+ (index+1);
+        numDiv.textContent = "/00" + (index + 1);
+    })
+}
+var secRight = document.querySelectorAll("#page6 .sec-right")
+console.log(secRight);
+secRight.forEach(function(elem){
+    elem.addEventListener("mouseenter",function(){
+        elem.childNodes[3].style.opacity = 1
+        elem.childNodes[3].play()
+        gsap.to(elem.childNodes[5],{
+            scale: 1,
+            width: "12vw",
+            height: "12vw",
+            zIndex: "100"
+        })
+    })
+    elem.addEventListener("mouseleave",function(){
+        elem.childNodes[3].style.opacity = 0
+        elem.childNodes[3].load()
+        gsap.to(elem.childNodes[5],{
+            scale: 0,
+            width: "12vw",
+            height: "12vw",
+            zIndex: "100"
+        })
+    })
+    elem.addEventListener("mousemove", function (dets) {
+
+
+        // console.log(elem.getBoundingClientRect().x);
+        // gsap.to(elem.childNodes[5], {
+        //     x: dets.x - elem.getBoundingClientRect().x - 50,
+        //     y: dets.y - elem.getBoundingClientRect().y - 50,
+        // })
+    })
 })
 
 
 
+autoCount(".elem");
 textBreaker(".page4-left h1");
 page3VideoAnimation();
 page2Right();
