@@ -421,6 +421,7 @@ nav button{
     position: relative;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 #page6 .section{
     width: 100%;

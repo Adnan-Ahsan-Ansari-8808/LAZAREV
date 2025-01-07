@@ -169,7 +169,7 @@ function autoCount(targetSelector){
     })
 }
 var secRight = document.querySelectorAll("#page6 .sec-right")
-console.log(secRight);
+// console.log(secRight);
 secRight.forEach(function(elem){
     elem.addEventListener("mouseenter",function(){
         elem.childNodes[3].style.opacity = 1
@@ -188,17 +188,19 @@ secRight.forEach(function(elem){
             scale: 0,
             width: "12vw",
             height: "12vw",
-            zIndex: "100"
+            zIndex: "0"
         })
     })
     elem.addEventListener("mousemove", function (dets) {
-
-
         // console.log(elem.getBoundingClientRect().x);
-        // gsap.to(elem.childNodes[5], {
-        //     x: dets.x - elem.getBoundingClientRect().x - 50,
-        //     y: dets.y - elem.getBoundingClientRect().y - 50,
-        // })
+        // console.log(elem.getBoundingClientRect().y);
+        console.log(dets.x);
+        gsap.to(elem.childNodes[5],{
+            x:dets.x - elem.getBoundingClientRect().x-100,
+            y:dets.y - elem.getBoundingClientRect().y - 100,
+            ease: "expoScale(0.5,7,none)",
+            duration:0.5
+        })
     })
 })
 
@@ -210,4 +212,4 @@ page3VideoAnimation();
 page2Right();
 page2Left();
 pencilLogoAnimation();
-navAnimation();
+// navAnimation();
