@@ -158,7 +158,7 @@ function textBreaker(targetSelector) {
         }
     })
 }
-function autoCount(targetSelector){
+function autoCount(targetSelector) {
     var elems = document.querySelectorAll(targetSelector)
 
     elems.forEach(function (elem, index) {
@@ -168,44 +168,67 @@ function autoCount(targetSelector){
         numDiv.textContent = "/00" + (index + 1);
     })
 }
-var secRight = document.querySelectorAll("#page6 .sec-right")
-// console.log(secRight);
-secRight.forEach(function(elem){
-    elem.addEventListener("mouseenter",function(){
-        elem.childNodes[3].style.opacity = 1
-        elem.childNodes[3].play()
-        gsap.to(elem.childNodes[5],{
-            scale: 1,
-            width: "12vw",
-            height: "12vw",
-            zIndex: "100"
+function page6Left() {
+    var secLeft = document.querySelectorAll("#page6 .sec-left")
+    secLeft.forEach(function (elem) {
+        elem.addEventListener("mouseenter", function () {
+            // console.log(elem.childNodes);
+            gsap.to(elem, {
+                borderTop: "3px solid #808080",
+                duration: 0.3
+            })
+        })
+        elem.addEventListener("mouseleave", function () {
+            gsap.to(elem, {
+                borderTop: "1px solid #333",
+                duration: 0.3
+            })
         })
     })
-    elem.addEventListener("mouseleave",function(){
-        elem.childNodes[3].style.opacity = 0
-        elem.childNodes[3].load()
-        gsap.to(elem.childNodes[5],{
-            scale: 0,
-            width: "12vw",
-            height: "12vw",
-            zIndex: "0"
+}
+function page6Right() {
+    var secRight = document.querySelectorAll("#page6 .sec-right")
+    // console.log(secRight);
+    secRight.forEach(function (elem) {
+        elem.addEventListener("mouseenter", function () {
+            elem.childNodes[3].style.opacity = 1
+            elem.childNodes[3].play()
+            gsap.to(elem.childNodes[5], {
+                scale: 1,
+                width: "12vw",
+                height: "12vw",
+                zIndex: "100"
+            })
+        })
+        elem.addEventListener("mouseleave", function () {
+            elem.childNodes[3].style.opacity = 0
+            elem.childNodes[3].load()
+            gsap.to(elem.childNodes[5], {
+                scale: 0,
+                width: "12vw",
+                height: "12vw",
+                zIndex: "0"
+            })
+        })
+        elem.addEventListener("mousemove", function (dets) {
+            // console.log(elem.getBoundingClientRect().x);
+            // console.log(elem.getBoundingClientRect().y);
+            console.log(dets.x);
+            gsap.to(elem.childNodes[5], {
+                x: dets.x - elem.getBoundingClientRect().x - 100,
+                y: dets.y - elem.getBoundingClientRect().y - 100,
+                ease: "expoScale(0.5,7,none)",
+                duration: 0.5
+            })
         })
     })
-    elem.addEventListener("mousemove", function (dets) {
-        // console.log(elem.getBoundingClientRect().x);
-        // console.log(elem.getBoundingClientRect().y);
-        console.log(dets.x);
-        gsap.to(elem.childNodes[5],{
-            x:dets.x - elem.getBoundingClientRect().x-100,
-            y:dets.y - elem.getBoundingClientRect().y - 100,
-            ease: "expoScale(0.5,7,none)",
-            duration:0.5
-        })
-    })
-})
+}
 
 
 
+
+page6Left();
+page6Right();
 autoCount(".elem");
 textBreaker(".page4-left h1");
 page3VideoAnimation();
