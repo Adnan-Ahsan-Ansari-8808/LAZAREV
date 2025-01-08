@@ -559,8 +559,12 @@ nav button{
     display: inline-block;
     font-size: 0.8vw;
     width: 13vw;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
-
+.page7-right>p:hover span{
+    font-size: 1.1vw;
+    color: wheat;
+}
 #page7-content{
     /* background-color: red; */
     margin-top: 5vh;
@@ -588,7 +592,7 @@ nav button{
 #page7-content #flex h4:hover{
     background-color: black;
     color: wheat;
-    
+    margin: 0 2vw 0 0;
 }
 .page7-container{
     margin: 5vh 0;
