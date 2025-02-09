@@ -224,9 +224,21 @@ function page6Right() {
     })
 }
 
+function page7Arrow(){
+
+    document.querySelector('.uiux summary h1').addEventListener('click', function() {  
+        const arrowIcon1 = document.getElementById('arrow-icon1');  
+        arrowIcon1.classList.toggle('rotate'); // Toggle rotation on click   
+    });
+
+    document.querySelector('.product summary h1').addEventListener('click', function() {  
+        const arrowIcon2 = document.getElementById('arrow-icon2');  
+        arrowIcon2.classList.toggle('rotate'); // Toggle rotation on click  
+    });
+}
 
 
-
+page7Arrow()
 page6Left();
 page6Right();
 autoCount("#page5 .elem");

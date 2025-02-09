@@ -625,6 +625,8 @@ nav button {
     padding: 2vh 0 8vh 0;
     font-size: 3.5vw;
     text-transform: uppercase;
+    display: flex;
+    justify-content: space-between;
 }
 
 #page7-content #flex {
@@ -718,4 +720,15 @@ nav button {
 }
 summary::marker{
     content: "";
+}  
+#arrow-icon1 {  
+    transition: transform 0.3s; /* Smooth transition for the rotation */  
+}  
+#arrow-icon2 {  
+    transition: transform 0.3s; /* Smooth transition for the rotation */  
+}  
+
+.rotate {  
+    transform: rotate(180deg); /* Rotate the icon */  
 }
+
