@@ -229,7 +229,7 @@ function page6Right() {
 
 page6Left();
 page6Right();
-autoCount(".elem");
+autoCount("#page5 .elem");
 textBreaker(".page4-left h1");
 page3VideoAnimation();
 page2Right();

@@ -11,7 +11,8 @@ body {
     height: 100%;
     width: 100%;
 }
-nav{
+
+nav {
     position: fixed;
     text-transform: uppercase;
     background-color: #111;
@@ -21,13 +22,15 @@ nav{
     padding: 1.5vw 11vw;
     width: 100vw;
     height: 12vh;
-    z-index: 3;
+    z-index: 300;
     /* opacity: 0.5; */
 }
-nav h1{
+
+nav h1 {
     font-size: 2vw;
 }
-.nav-part2{
+
+.nav-part2 {
     display: flex;
     gap: 1vw;
     align-items: flex-start;
@@ -37,7 +40,7 @@ nav h1{
     /* background-color: aqua; */
 }
 
-.nav-part2 h4{
+.nav-part2 h4 {
     font-weight: 400;
     font-size: 1vw;
     text-transform: uppercase;
@@ -45,14 +48,15 @@ nav h1{
     cursor: pointer;
     height: 2vw;
 }
-.nav-part2 h5{
+
+.nav-part2 h5 {
     margin-bottom: 1vw;
     display: none;
     overflow-y: hidden;
     cursor: pointer;
 }
 
-.nav-part2 h5 span{
+.nav-part2 h5 span {
     font-weight: 400;
     font-size: 0.9vw;
     text-transform: capitalize;
@@ -60,7 +64,8 @@ nav h1{
     padding-left: 0.2vw;
     transform: translateY(25px);
 }
-#nav-bottom{
+
+#nav-bottom {
     border-bottom: 2px solid #dadada;
     height: 0vh;
     width: 78%;
@@ -71,12 +76,13 @@ nav h1{
     background-color: #111;
 }
 
-.bottom-div h5{
+.bottom-div h5 {
     font-weight: 100;
     margin-bottom: 1.1vw;
     cursor: pointer;
 }
-nav button{
+
+nav button {
     background-color: #0DA34E;
     display: flex;
     justify-content: space-between;
@@ -92,7 +98,7 @@ nav button{
 }
 
 
-#page1{
+#page1 {
     width: 100%;
     height: 100vh;
     background-color: #111;
@@ -101,7 +107,8 @@ nav button{
     justify-content: center;
     align-items: center;
 }
-#page1 h1{
+
+#page1 h1 {
     text-transform: uppercase;
     font-size: 8vw;
     line-height: 8vw;
@@ -109,23 +116,25 @@ nav button{
     display: flex;
     align-items: center;
 }
-#page1 span{
-    width: 6vw;  
-    height: 6vw;  
-    border-radius: 50%;  
-    background-color: #0DA34E;  
-    display: flex;  
-    justify-content: center;  
+
+#page1 span {
+    width: 6vw;
+    height: 6vw;
+    border-radius: 50%;
+    background-color: #0DA34E;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    
+
 }
 
-#page1 p{
+#page1 p {
     text-align: center;
     font-weight: 400;
     margin-top: 30px;
 }
-#page1-tags{
+
+#page1-tags {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,7 +142,8 @@ nav button{
     margin-top: 20px;
     gap: 10px;
 }
-#page1-tags h4{
+
+#page1-tags h4 {
     font-weight: 400;
     font-size: 1.12vw;
     border: 1px solid white;
@@ -141,14 +151,15 @@ nav button{
     border-radius: 20px;
     cursor: pointer;
 }
-#page1-tags h4:nth-last-child(2){
+
+#page1-tags h4:nth-last-child(2) {
     color: #0DA34E;
     background-color: #0da34e25;
     cursor: auto;
     border-color: #0DA34E;
 }
 
-#moving-div{
+#moving-div {
     /* background-color: rebeccapurple; */
     position: absolute;
     bottom: 0vh;
@@ -159,7 +170,8 @@ nav button{
     white-space: nowrap;
     overflow-x: hidden;
 }
-#moving-div .move{
+
+#moving-div .move {
     height: 4vw;
     display: inline-flex;
     justify-content: space-evenly;
@@ -170,42 +182,46 @@ nav button{
     animation-timing-function: linear;
     animation-iteration-count: infinite;
 }
-#moving-div .move img{
+
+#moving-div .move img {
     height: 1.2vw;
     margin: 0 .1vw;
 }
-#moving-div #blur-left{
+
+#moving-div #blur-left {
     height: 100%;
     width: 20%;
-    background: linear-gradient(to left, transparent,#111);
+    background: linear-gradient(to left, transparent, #111);
     position: absolute;
     top: 0;
     left: 0;
     z-index: 2;
-    overflow-y:  hidden;
+    overflow-y: hidden;
 }
-#moving-div #blur-right{
+
+#moving-div #blur-right {
     height: 100%;
     width: 20%;
-    background: linear-gradient(to left,#111, transparent);
+    background: linear-gradient(to left, #111, transparent);
     position: absolute;
     top: 0;
     right: 0;
     z-index: 2;
-    overflow-y:  hidden;
+    overflow-y: hidden;
 }
 
 @keyframes moveX {
-    0%{
+    0% {
         transform: translateX(0);
     }
-    100%{
+
+    100% {
         transform: translateX(-100%);
     }
 }
 
 
-#page2{
+#page2 {
     width: 100%;
     height: 100vh;
     background-color: #111;
@@ -216,7 +232,8 @@ nav button{
     justify-content: space-between;
     /* background-color: #0DA34E; */
 }
-#page2-left{
+
+#page2-left {
     height: 100%;
     width: 45%;
     padding-top: 2vw;
@@ -226,36 +243,41 @@ nav button{
     flex-direction: column;
     border-top: 1px solid #333;
 }
-#page2-left p{
+
+#page2-left p {
     font-size: 0.8vw;
 }
-#page2-left h5{
+
+#page2-left h5 {
     font-weight: 100;
     font-size: 1.05vw;
     width: 70%;
 }
 
-#page2-right{
+#page2-right {
     height: 100%;
     width: 55%;
     display: flex;
     flex-direction: column;
     gap: 0.7vw;
 }
+
 #page2-right .right-elem {
     position: relative;
     /* height: 15vh; */
     padding: 2.3vw 0;
     border-top: 1px solid #333;
     cursor: pointer;
-    
+
 }
-#page2-right .right-elem h2{
+
+#page2-right .right-elem h2 {
     text-transform: capitalize;
     font-weight: 100;
     font-size: 1.4vw;
 }
-#page2-right .right-elem img{
+
+#page2-right .right-elem img {
     position: absolute;
     top: 0;
     width: 7vw;
@@ -266,7 +288,7 @@ nav button{
 }
 
 
-#page3{
+#page3 {
     width: 100%;
     height: 100vh;
     background-color: #111;
@@ -277,7 +299,8 @@ nav button{
     justify-content: center;
     align-items: center;
 }
-#page3 video{
+
+#page3 video {
     height: 100%;
     width: 100%;
     position: absolute;
@@ -286,6 +309,7 @@ nav button{
     border-radius: 30px;
     z-index: 99;
 }
+
 .page3-center {
     /* background-color: #0DA34E; */
     border-radius: 50px;
@@ -296,7 +320,8 @@ nav button{
     flex-direction: column;
     gap: 0.8vw;
 }
-.page3-center .icon{
+
+.page3-center .icon {
     background-color: white;
     padding: 3.3vw;
     display: flex;
@@ -304,13 +329,15 @@ nav button{
     align-items: center;
     border-radius: 50%;
     cursor: pointer;
-    
+
 }
-.page3-center .icon i{
+
+.page3-center .icon i {
     font-size: 2vw;
     color: black;
 }
-.page3-center h5{
+
+.page3-center h5 {
     font-size: 1vw;
     background-color: white;
     color: black;
@@ -321,27 +348,30 @@ nav button{
     transform: translateY(20%);
     transition: all ease 0.5s;
 }
-.page3-center:hover h5{
+
+.page3-center:hover h5 {
     opacity: 1;
     transform: translateY(0%);
 }
 
-#page4{
+#page4 {
     width: 100%;
     height: 100vh;
     position: relative;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    padding: 10vw 6vw ;
+    padding: 10vw 6vw;
 }
-.page4-left{
+
+.page4-left {
     width: 35%;
     height: auto;
     /* background-color: #0DA34E; */
-    
+
 }
-.page4-left h1{
+
+.page4-left h1 {
     color: black;
     font-size: 3.4vw;
     line-height: 3.4vw;
@@ -349,11 +379,13 @@ nav button{
     font-weight: 600;
     overflow: hidden;
 }
-.page4-left h1 span{
+
+.page4-left h1 span {
     color: black;
     text-transform: capitalize;
 }
-.page4-right{
+
+.page4-right {
     width: 50%;
     height: 70vh;
     display: flex;
@@ -361,28 +393,30 @@ nav button{
     gap: 4vw;
 }
 
-.page4-right p{
+.page4-right p {
     color: #b1b1b1;
     text-transform: uppercase;
     font-weight: 800;
     text-decoration: underline;
 }
-.page4-right .detail{
+
+.page4-right .detail {
     font-size: 1.5vw;
     margin-top: 2vw;
     color: black;
 }
 
-#page5{
+#page5 {
     width: 100%;
     height: 80vh;
     position: relative;
-    padding: 0 6vw 5vw 6vw ;
+    padding: 0 6vw 5vw 6vw;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 0.7vw;
 }
-#page5 .elem{
+
+#page5 .elem {
     position: relative;
     width: auto;
     height: auto;
@@ -394,27 +428,31 @@ nav button{
     justify-content: space-between;
     transition: all ease 0.8s;
 }
-#page5 .elem:hover{
+
+#page5 .elem:hover {
     background-color: #e2e2e2;
     scale: 1.02;
     border-radius: 1vw;
 }
-#page5 .elem h1{
+
+#page5 .elem h1 {
     color: black;
     font-size: 3vw;
     text-transform: capitalize;
 }
-#page5 .elem p{
-    color:#424242;
+
+#page5 .elem p {
+    color: #424242;
 }
-#page5 .elem .num{
-    color:#696969;
+
+#page5 .elem .num {
+    color: #696969;
     position: absolute;
     bottom: 2vw;
     right: 2vw;
 }
 
-#page6{
+#page6 {
     min-height: 100vh;
     width: 100%;
     background-color: #111;
@@ -423,15 +461,17 @@ nav button{
     flex-direction: column;
     overflow-x: hidden;
 }
-#page6 .section{
+
+#page6 .section {
     width: 100%;
     height: 90vh;
-    padding: 6vw 10vw 6vw 11vw ;
+    padding: 6vw 10vw 6vw 11vw;
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-} 
-#page6 .section .sec-left{
+}
+
+#page6 .section .sec-left {
     width: 25%;
     height: 100%;
     border-top: 1px solid #333;
@@ -439,45 +479,49 @@ nav button{
     flex-direction: column;
     justify-content: flex-start;
     gap: 7vw;
-    padding: 1vw 0.5vw;  
+    padding: 1vw 0.5vw;
 }
 
-#page6 .section .sec-left h2{
+#page6 .section .sec-left h2 {
     text-transform: capitalize;
     font-size: 2.5vw;
-    font-weight: 100;   
+    font-weight: 100;
     display: flex;
     justify-content: space-between;
 }
 
-#page6 .section .sec-left button{
+#page6 .section .sec-left button {
     background-color: transparent;
     border: transparent;
 }
-#page6 .section .sec-right{
+
+#page6 .section .sec-right {
     position: relative;
     display: flex;
     align-items: baseline;
     width: 70%;
     height: 70vh;
-    background-color: rgb(0, 0, 0);   
+    background-color: rgb(0, 0, 0);
     border-top: 1px solid #333;
 }
-#page6 .section .sec-right img{
+
+#page6 .section .sec-right img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-#page6 .section .sec-right video{
-    position: absolute; 
+
+#page6 .section .sec-right video {
+    position: absolute;
     top: 0;
-    left: 0; 
+    left: 0;
     opacity: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
-#page6 .section .sec-right .cursor{
+
+#page6 .section .sec-right .cursor {
     background-color: #4F5BFF;
     position: absolute;
     top: 0;
@@ -489,15 +533,16 @@ nav button{
     align-items: end;
     justify-content: start;
 }
-#page6 .section .sec-right .cursor p{
+
+#page6 .section .sec-right .cursor p {
     text-transform: uppercase;
     font-size: 1vw;
     font-weight: 900;
-   width: 0;
-   height: 0;
+    width: 0;
+    height: 0;
 }
 
-#page7{
+#page7 {
     width: 100%;
     min-height: 100vh;
     padding: 20vh 10vw 20vh 11vw;
@@ -508,19 +553,23 @@ nav button{
     justify-content: space-between;
     gap: 5vw;
 }
-.page7-left{
+
+.page7-left {
     width: 25%;
     height: 100%;
     /* padding-top: 5vh; */
     /* border-top: 2px solid #333; */
 }
-.page7-left .top{
+
+.page7-left .top {
     margin-bottom: 40vh;
 }
-.page7-left .top h1{
+
+.page7-left .top h1 {
     display: inline-block;
 }
-.page7-left button{
+
+.page7-left button {
     background-color: #0DA34E;
     padding: 1.5vw 3vw;
     width: 20vw;
@@ -533,54 +582,67 @@ nav button{
     justify-content: center;
     font-weight: 900;
     font-size: 1vw;
-    
+
 }
-#page7 button span{
+
+#page7 button span {
     display: flex;
     align-items: center;
 }
 
-.page7-right{
+.page7-right {
     width: 70%;
     height: 100%;
 }
-.page7-right .top{
+
+.page7-right .top {
     margin-bottom: 10vh;
 }
-.page7-right .top h1{
+
+.page7-right .top h1 {
     text-transform: capitalize;
     font-size: 5vw;
     line-height: 5vw;
 }
-.page7-right>p{
+
+.page7-right>p {
     font-size: 2.2vw;
 }
-.page7-right>p span{
+
+.page7-right>p span {
     display: inline-block;
     font-size: 0.8vw;
     width: 13vw;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
-.page7-right>p:hover span{
+
+.page7-right>p:hover span {
     font-size: 1.1vw;
     color: wheat;
 }
-#page7-content{
+
+#page7-content {
     /* background-color: red; */
     margin-top: 5vh;
     padding: 5vh 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3vw;
 }
-#page7-content h1{
+
+#page7-content h1 {
     border-top: 1px solid #333;
     padding: 2vh 0 8vh 0;
     font-size: 3.5vw;
     text-transform: uppercase;
 }
-#page7-content #flex{
+
+#page7-content #flex {
     display: flex;
     gap: 0.1vw;
 }
-#page7-content #flex h4{
+
+#page7-content #flex h4 {
     text-transform: capitalize;
     font-weight: 100;
     font-size: 0.9vw;
@@ -589,15 +651,18 @@ nav button{
     border-radius: 2vw;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
-#page7-content #flex h4:hover{
+
+#page7-content #flex h4:hover {
     background-color: black;
     color: wheat;
     margin: 0 2vw 0 0;
 }
-.page7-container{
+
+.page7-container {
     margin: 5vh 0;
 }
-.page7-container .elem{
+
+.page7-container .elem {
     padding: 3vh 0;
     display: flex;
     align-items: flex-start;
@@ -609,7 +674,7 @@ nav button{
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.1s;
 }
 
-.page7-container .elem h3{
+.page7-container .elem h3 {
     font-size: 1.8vw;
     text-transform: capitalize;
     font-weight: 100;
@@ -618,20 +683,22 @@ nav button{
     z-index: 8;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
 }
-.page7-container .elem p{
+
+.page7-container .elem p {
     width: 55%;
     font-size: 0.88vw;
     line-height: 1.2;
     position: relative;
     z-index: 8;
 }
-.page7-container .elem span{
+
+.page7-container .elem span {
     position: relative;
     z-index: 8;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
-    
 }
-.page7-container .elem .over{
+
+.page7-container .elem .over {
     height: 100%;
     width: 100%;
     background-color: #222;
@@ -639,18 +706,23 @@ nav button{
     top: 0;
     transform: translateY(-100%);
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    opacity: 0;
 }
-.page7-container .elem:hover{
+
+.page7-container .elem:hover {
     border-top: 2px solid white;
     z-index: 8;
 }
-.page7-container .elem:hover h3{
+
+.page7-container .elem:hover h3 {
     padding-left: 1vw;
 }
-.page7-container .elem:hover span{
+
+.page7-container .elem:hover span {
     padding-right: 1vw;
 }
-.page7-container .elem:hover .over{
+
+.page7-container .elem:hover .over {
     transform: translateY(0%);
     opacity: 1;
 }
