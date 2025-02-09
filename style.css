@@ -554,22 +554,11 @@ nav button {
     gap: 5vw;
 }
 
-.page7-left {
-    width: 25%;
-    height: 100%;
-    /* padding-top: 5vh; */
-    /* border-top: 2px solid #333; */
-}
-
-.page7-left .top {
-    margin-bottom: 40vh;
-}
-
-.page7-left .top h1 {
+#page7 .top h1 {
     display: inline-block;
 }
 
-.page7-left button {
+#page7 button {
     background-color: #0DA34E;
     padding: 1.5vw 3vw;
     width: 20vw;
@@ -582,7 +571,8 @@ nav button {
     justify-content: center;
     font-weight: 900;
     font-size: 1vw;
-
+    position: sticky;
+    top: 15%;
 }
 
 #page7 button span {
@@ -725,4 +715,7 @@ nav button {
 .page7-container .elem:hover .over {
     transform: translateY(0%);
     opacity: 1;
+}
+summary::marker{
+    content: "";
 }
