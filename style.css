@@ -578,7 +578,13 @@ nav button {
 #page7 button span {
     display: flex;
     align-items: center;
+    /* flex-direction: column; */
 }
+/* #page7 button span .second{
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+} */
 
 .page7-right {
     width: 70%;
@@ -688,6 +694,14 @@ nav button {
     position: relative;
     z-index: 8;
     transition: all cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    display: flex;
+    flex-direction: column;
+}
+.page7-container .elem span .second{
+    position: absolute;
+    top: 10px;
+    opacity: 0;
+    
 }
 
 .page7-container .elem .over {
@@ -728,7 +742,9 @@ summary::marker{
     transition: transform 0.3s; /* Smooth transition for the rotation */  
 }  
 
-.rotate {  
+.rotate1 {  
     transform: rotate(180deg); /* Rotate the icon */  
 }
-
+.rotate2 {  
+    transform: rotate(-180deg); /* Rotate the icon */  
+}

@@ -223,22 +223,56 @@ function page6Right() {
         })
     })
 }
+function arrowAnimation(targetSelector) {
+    var targetElement = document.querySelector(targetSelector)
+    if(!targetElement){
+        console.log(`Target Element: "${targetSelector}" not found...!!!`);
+        
+    }
+    var arrow = document.querySelectorAll(targetSelector);
 
-function page7Arrow(){
+    arrow.forEach(function (elem) {
+        var first = elem.querySelector("span .first");
+        var second = elem.querySelector("span .second");
 
-    document.querySelector('.uiux summary h1').addEventListener('click', function() {  
-        const arrowIcon1 = document.getElementById('arrow-icon1');  
-        arrowIcon1.classList.toggle('rotate'); // Toggle rotation on click   
+        //-----------page7 elem hover effect(mouse enter) on arrow(svg)-----------
+        elem.addEventListener("mouseenter", function () {
+            gsap.to(first, {
+                y: -10,
+                opacity: 0,
+            })
+            gsap.to(second, {
+                y: -10,
+                opacity: 1,
+            })
+        })
+        //-----------page7 elem hover effect(mouse leave) on arrow(svg)----------
+        elem.addEventListener("mouseleave", function () {
+            gsap.to(first, {
+                y: 0,
+                opacity: 1,
+            })
+            gsap.to(second, {
+                y: 0,
+                opacity: 0,
+            })
+        })
+    })
+}
+function page7() {
+    document.querySelector('.uiux summary h1').addEventListener('click', function () {
+        const arrowIcon1 = document.getElementById('arrow-icon1');
+        arrowIcon1.classList.toggle('rotate2'); // Toggle rotation on click   
     });
 
-    document.querySelector('.product summary h1').addEventListener('click', function() {  
-        const arrowIcon2 = document.getElementById('arrow-icon2');  
-        arrowIcon2.classList.toggle('rotate'); // Toggle rotation on click  
+    document.querySelector('.product summary h1').addEventListener('click', function () {
+        const arrowIcon2 = document.getElementById('arrow-icon2');
+        arrowIcon2.classList.toggle('rotate1'); // Toggle rotation on click  
     });
 }
 
-
-page7Arrow()
+arrowAnimation(".page7-container .elem");
+page7();
 page6Left();
 page6Right();
 autoCount("#page5 .elem");
