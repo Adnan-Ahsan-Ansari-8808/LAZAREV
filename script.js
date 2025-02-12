@@ -262,12 +262,12 @@ function arrowAnimation(targetSelector) {
 function page7() {
     document.querySelector('.uiux summary h1').addEventListener('click', function () {
         const arrowIcon1 = document.getElementById('arrow-icon1');
-        arrowIcon1.classList.toggle('rotate2'); // Toggle rotation on click   
+        arrowIcon1.classList.toggle('rotate1'); // Toggle rotation on click   
     });
 
     document.querySelector('.product summary h1').addEventListener('click', function () {
         const arrowIcon2 = document.getElementById('arrow-icon2');
-        arrowIcon2.classList.toggle('rotate1'); // Toggle rotation on click  
+        arrowIcon2.classList.toggle('rotate2'); // Toggle rotation on click  
     });
 }
 
