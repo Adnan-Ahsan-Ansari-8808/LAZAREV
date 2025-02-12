@@ -545,7 +545,7 @@ nav button {
 #page7 {
     width: 100%;
     min-height: 100vh;
-    padding: 20vh 10vw 20vh 11vw;
+    padding: 20vh 10vw 10vh 11vw;
     background-color: #111;
     position: relative;
     display: flex;
@@ -731,6 +731,13 @@ nav button {
 .page7-container .elem:hover .over {
     transform: translateY(0%);
     opacity: 1;
+}
+details{
+    border-top: 0px solid #333;
+    transition: border-top 0.3s ease;
+}
+details[open] {  
+    border-top: 1.5px solid white;
 }
 summary::marker{
     content: "";

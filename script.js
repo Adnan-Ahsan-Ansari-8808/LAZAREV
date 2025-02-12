@@ -213,7 +213,7 @@ function page6Right() {
         elem.addEventListener("mousemove", function (dets) {
             // console.log(elem.getBoundingClientRect().x);
             // console.log(elem.getBoundingClientRect().y);
-            console.log(dets.x);
+            // console.log(dets.x);
             gsap.to(elem.childNodes[5], {
                 x: dets.x - elem.getBoundingClientRect().x - 100,
                 y: dets.y - elem.getBoundingClientRect().y - 100,
