@@ -225,9 +225,9 @@ function page6Right() {
 }
 function arrowAnimation(targetSelector) {
     var targetElement = document.querySelector(targetSelector)
-    if(!targetElement){
+    if (!targetElement) {
         console.log(`Target Element: "${targetSelector}" not found...!!!`);
-        
+
     }
     var arrow = document.querySelectorAll(targetSelector);
 
@@ -270,6 +270,23 @@ function page7() {
         arrowIcon2.classList.toggle('rotate2'); // Toggle rotation on click  
     });
 }
+
+gsap.from(".bottom8-parts h4", {
+    x: 0,
+    duration: 0.5,
+    stagger: {
+        amount: -0.3,
+    },
+    scrollTrigger: {
+        trigger: "#bottom8-part2",
+        scroller: "body",
+        markers: true,
+        start: "top 80%",
+        end: "top 30%",
+        scrub: 1
+    }
+})
+
 
 arrowAnimation(".page7-container .elem");
 page7();

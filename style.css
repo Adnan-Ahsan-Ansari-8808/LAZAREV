@@ -558,7 +558,7 @@ nav button {
     display: inline-block;
 }
 
-.page-buttons{
+.page-buttons {
     background-color: #0DA34E;
     padding: 2.2vw;
     width: 20vw;
@@ -575,7 +575,8 @@ nav button {
     top: 20%;
     cursor: pointer;
 }
-.page-buttons h4{
+
+.page-buttons h4 {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -588,6 +589,7 @@ nav button {
     align-items: center;
     /* flex-direction: column; */
 }
+
 /* #page7 button span .second{
     position: absolute;
     top: 10px;
@@ -628,7 +630,7 @@ nav button {
 #page7-content {
     /* background-color: red; */
     margin-top: 5vh;
-    padding: 5vh 0 ;
+    padding: 5vh 0;
     display: flex;
     flex-direction: column;
     gap: 3vw;
@@ -705,11 +707,12 @@ nav button {
     display: flex;
     flex-direction: column;
 }
-.page7-container .elem span .second{
+
+.page7-container .elem span .second {
     position: absolute;
     top: 10px;
     opacity: 0;
-    
+
 }
 
 .page7-container .elem .over {
@@ -740,38 +743,48 @@ nav button {
     transform: translateY(0%);
     opacity: 1;
 }
-details{
+
+details {
     border-top: 0px solid #333;
     transition: border-top 0.3s ease;
 }
-details[open] {  
+
+details[open] {
     border-top: 1.5px solid white;
 }
-summary::marker{
+
+summary::marker {
     content: "";
-}  
-#arrow-icon1 {  
-    transition: transform 0.3s; /* Smooth transition for the rotation */  
-}  
-#arrow-icon2 {  
-    transition: transform 0.3s; /* Smooth transition for the rotation */  
-}  
-
-.rotate1 {  
-    transform: rotate(180deg); /* Rotate the icon */  
-}
-.rotate2 {  
-    transform: rotate(-180deg); /* Rotate the icon */  
 }
 
-#page8{
+#arrow-icon1 {
+    transition: transform 0.3s;
+    /* Smooth transition for the rotation */
+}
+
+#arrow-icon2 {
+    transition: transform 0.3s;
+    /* Smooth transition for the rotation */
+}
+
+.rotate1 {
+    transform: rotate(180deg);
+    /* Rotate the icon */
+}
+
+.rotate2 {
+    transform: rotate(-180deg);
+    /* Rotate the icon */
+}
+
+#page8 {
     min-height: 100vh;
     width: 100%;
     background-color: hsl(0, 0%, 100%);
     padding: 10vh 10vw 10vh 11vw;
 }
 
-#page8 h1{
+#page8 h1 {
     font-size: 6vw;
     line-height: 6vw;
     text-transform: capitalize;
@@ -779,7 +792,7 @@ summary::marker{
     padding: 5% 5% 3% 32%;
 }
 
-#page8-content{
+#page8-content {
     padding: 5vh 0 10vh 0;
     /* background-color: #0DA34E; */
     display: flex;
@@ -788,11 +801,11 @@ summary::marker{
     gap: 5vw;
 }
 
-#page8 button{
+#page8 button {
     background-color: #4F5BFF;
 }
 
-#page8-right{
+#page8-right {
     border-top: 1px solid #dadada;
     padding-top: 2vw;
     width: 55%;
@@ -800,13 +813,102 @@ summary::marker{
     flex-direction: column;
     gap: 15vh;
 }
-#page8-right p{
+
+#page8-right p {
     color: black;
     font-size: 1.5vw;
 }
 
-#page8-bottom{
-    height: 40vh;
+#page8-bottom {
+    /* background-color: #0DA34E; */
+    height: 140vh;
     width: 100%;
     border-top: 1px solid #dadada;
+    display: flex;
+    align-items: flex-start;
+
+}
+
+#bottom8-part1 {
+    height: 100%;
+    width: 30%;
+}
+
+.bottom8-parts {
+    padding: 4vh 0.2vw;
+    border-right: 1px solid #dadada;
+    height: 100%;
+    width: 15%;
+}
+
+#bottom8-part2 {
+    width: 30%;
+}
+
+#bottom8-part5 {
+    border: none;
+    width: 10%;
+}
+
+.bottom8-parts h5 {
+    color: black;
+    text-transform: capitalize;
+    font-size: 1vw;
+    font-weight: 100;
+    margin-bottom: 4vh;
+}
+
+#bottom8-part2 h4 {
+    max-width: 70%;
+}
+.bottom8-parts h4:nth-child(2){
+    transform: translateX(0);
+}
+.bottom8-parts h4:nth-child(3){
+    transform: translateX(8.5%);
+}
+.bottom8-parts h4:nth-child(4){
+    transform: translateX(17%);
+}
+.bottom8-parts h4:nth-child(5){
+    transform: translateX(25.5%);
+}
+.bottom8-parts h4:nth-child(6){
+    transform: translateX(34%);
+}
+.bottom8-parts h4:nth-child(7){
+    transform: translateX(42.5%);
+}
+
+/* #bottom8-part3 h4:nth-child(3),#bottom8-part4 h4:nth-child(3){
+    transform: translateX(11%) !important;
+}
+#bottom8-part4 h4:nth-child(4),#bottom8-part4 h4:nth-child(4){
+    transform: translateX(22%) !important;
+} */
+
+
+.bottom8-parts h4 {
+    max-width: 90%;
+    background-color: black;
+    padding: 5px 5px;
+    border-radius: 50px;
+    font-size: 1vw;
+    gap: 4px;
+    display: flex;
+    /* justify-content: space-; */
+    align-items: center;
+    text-transform: capitalize;
+    margin: 3px 0;
+}
+
+.bottom8-parts h4 span {
+    background-color: #333;
+    width: 2vw;
+    height: 2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    padding: 0.5vw;
 }
