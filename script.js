@@ -1,3 +1,61 @@
+function locomotiveAnimation() {
+    gsap.registerPlugin(ScrollTrigger);
+
+    const locoScroll = new LocomotiveScroll({
+        el: document.querySelector("#main"),
+        smooth: true,
+
+        // for tablet smooth
+        tablet: { smooth: true },
+
+        // for mobile
+        smartphone: { smooth: true }
+    });
+    locoScroll.on("scroll", ScrollTrigger.update);
+
+    ScrollTrigger.scrollerProxy("#main", {
+        scrollTop(value) {
+            return arguments.length
+                ? locoScroll.scrollTo(value, 0, 0)
+                : locoScroll.scroll.instance.scroll.y;
+        },
+        getBoundingClientRect() {
+            return {
+                top: 0,
+                left: 0,
+                width: window.innerWidth,
+                height: window.innerHeight
+            };
+        }
+    });
+
+    ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+    ScrollTrigger.refresh();
+}
+function loadingAnimation() {
+    var tl = gsap.timeline();
+    tl.from("#page1", {
+        opacity: 0,
+    })
+    tl.from("#page1", {
+        transform: "scaleX(0.7) scaleY(0)",
+        borderRadius: "100px",
+        duration:2,
+        ease:"expo.out",
+        
+        y:200,
+    })
+    tl.from("nav", {
+        opacity: 0
+    })
+    tl.from("#page1 h1,#page1 p,#page1 div", {
+        opacity: 0,
+        stagger: 0.2,
+        duration:0.5,
+    })
+}
+
 function navAnimation() {
     var nav = document.querySelector("nav");
     nav.addEventListener("mouseenter", function () {
@@ -130,34 +188,7 @@ function page3VideoAnimation() {
         })
     })
 }
-function textBreaker(targetSelector) {
-    var targetElement = document.querySelector(targetSelector)
-    if (!targetElement) {
-        console.log(`Target Element: ${targetSelector} not found!!`);
-    }
-    var targetElementText = targetElement.innerHTML;
-    var splittedText = targetElementText.split("")
-    var wrappedText = ""
-    splittedText.forEach(function (elem) {
-        // console.log(elem);
-        wrappedText += `<span>${elem}</span>`
-    })
-    targetElement.innerHTML = wrappedText;
-    // console.log(targetElement);
-    gsap.from(`${targetSelector} span`, {
-        // y:100,
-        opacity: 0.3,
-        stagger: 0.25,
-        scrollTrigger: {
-            scroller: "body",
-            trigger: "#page4",
-            // markers: true,
-            start: "top 70%",
-            end: "top 45%",
-            scrub: 2,
-        }
-    })
-}
+
 function autoCount(targetSelector) {
     var elems = document.querySelectorAll(targetSelector)
 
@@ -271,23 +302,10 @@ function page7() {
     });
 }
 
-gsap.from(".bottom8-parts h4", {
-    x: 0,
-    duration: 0.5,
-    stagger: {
-        amount: -0.3,
-    },
-    scrollTrigger: {
-        trigger: "#bottom8-part2",
-        scroller: "body",
-        markers: true,
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 1
-    }
-})
 
 
+locomotiveAnimation();
+loadingAnimation();
 arrowAnimation(".page7-container .elem");
 page7();
 page6Left();
@@ -298,4 +316,49 @@ page3VideoAnimation();
 page2Right();
 page2Left();
 pencilLogoAnimation();
-// navAnimation();
+navAnimation();
+
+gsap.from(".bottom8-parts h4", {
+    x: 0,
+    duration: 0.5,
+    stagger: {
+        amount: -0.3,
+    },
+    scrollTrigger: {
+        trigger: "#bottom8-part2",
+        scroller: "#main",
+        // markers: true,
+        start: "top 80%",
+        end: "top 30%",
+        scrub: 1
+    }
+})
+
+function textBreaker(targetSelector) {
+    var targetElement = document.querySelector(targetSelector)
+    if (!targetElement) {
+        console.log(`Target Element: ${targetSelector} not found!!`);
+    }
+    var targetElementText = targetElement.innerHTML;
+    var splittedText = targetElementText.split("")
+    var wrappedText = ""
+    splittedText.forEach(function (elem) {
+        // console.log(elem);
+        wrappedText += `<span>${elem}</span>`
+    })
+    targetElement.innerHTML = wrappedText;
+    // console.log(targetElement);
+    gsap.from(`${targetSelector} span`, {
+        // y:100,
+        opacity: 0.3,
+        stagger: 0.25,
+        scrollTrigger: {
+            scroller: "#main",
+            trigger: "#page4",
+            // markers: true,
+            start: "top 70%",
+            end: "top 45%",
+            scrub: 2,
+        }
+    })
+}
