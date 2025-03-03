@@ -94,22 +94,48 @@ function navAnimation() {
             duration: 0.1,
         })
     })
+    nav.querySelector("button").addEventListener("mouseenter",function(){
+        gsap.to("nav button span",{
+            rotate:360,
+            yoyo:true,
+            duration:1,
+            scale:1.3,
+        })
+    })
+    nav.querySelector("button").addEventListener("mouseleave",function(){
+        gsap.to("nav button span",{
+            rotate:-360,
+            yoyo:true,
+            duration:1,
+            scale:1,
+        })
+    })
 }
 function pencilLogoAnimation() {
     document.querySelector("#page1 h1 span").addEventListener("mouseenter", function () {
         gsap.to("#page1 h1 span", {
-            scale: 0.9,
+            scale: 0.95,
             width: "4vw",
             rotate: -20,
             duration: 0.3,
         })
+        gsap.to("#page1 h1 span svg", {
+            scale: 1.3,
+            rotate: -360,
+            duration: 1,
+        })
     })
     document.querySelector("#page1 h1 span").addEventListener("mouseleave", function () {
-        gsap.to("#page1 h1 span", {
+        gsap.to("#page1 h1 span ", {
             scale: 1,
             width: "6vw",
             rotate: 10,
-            duration: 0.3
+            duration: 0.3,
+        })
+        gsap.to("#page1 h1 span svg", {
+            scale: 1,
+            rotate: 360,
+            duration: 1
         })
     })
 }
@@ -303,9 +329,9 @@ function page7() {
 }
 
 
-
 locomotiveAnimation();
-loadingAnimation();
+page8();
+// loadingAnimation();
 arrowAnimation(".page7-container .elem");
 page7();
 page6Left();
@@ -318,21 +344,24 @@ page2Left();
 pencilLogoAnimation();
 navAnimation();
 
-gsap.from(".bottom8-parts h4", {
-    x: 0,
-    duration: 0.5,
-    stagger: {
-        amount: -0.3,
-    },
-    scrollTrigger: {
-        trigger: "#bottom8-part2",
-        scroller: "#main",
-        // markers: true,
-        start: "top 80%",
-        end: "top 30%",
-        scrub: 1
-    }
-})
+function page8() {
+
+    gsap.from(".bottom8-parts h4", {
+        x: 0,
+        duration: 0.5,
+        stagger: {
+            amount: -0.3,
+        },
+        scrollTrigger: {
+            trigger: "#bottom8-part2",
+            scroller: "#main",
+            // markers: true,
+            start: "top 80%",
+            end: "top 30%",
+            scrub: 1
+        }
+    })
+}
 
 function textBreaker(targetSelector) {
     var targetElement = document.querySelector(targetSelector)
