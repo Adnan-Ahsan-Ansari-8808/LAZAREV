@@ -863,22 +863,28 @@ summary::marker {
 #bottom8-part2 h4 {
     max-width: 70%;
 }
-.bottom8-parts h4:nth-child(2){
+
+.bottom8-parts h4:nth-child(2) {
     transform: translateX(0);
 }
-.bottom8-parts h4:nth-child(3){
+
+.bottom8-parts h4:nth-child(3) {
     transform: translateX(8.5%);
 }
-.bottom8-parts h4:nth-child(4){
+
+.bottom8-parts h4:nth-child(4) {
     transform: translateX(17%);
 }
-.bottom8-parts h4:nth-child(5){
+
+.bottom8-parts h4:nth-child(5) {
     transform: translateX(25.5%);
 }
-.bottom8-parts h4:nth-child(6){
+
+.bottom8-parts h4:nth-child(6) {
     transform: translateX(34%);
 }
-.bottom8-parts h4:nth-child(7){
+
+.bottom8-parts h4:nth-child(7) {
     transform: translateX(42.5%);
 }
 

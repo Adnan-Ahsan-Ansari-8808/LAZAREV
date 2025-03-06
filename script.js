@@ -41,10 +41,10 @@ function loadingAnimation() {
     tl.from("#page1", {
         transform: "scaleX(0.7) scaleY(0)",
         borderRadius: "100px",
-        duration:2,
-        ease:"expo.out",
-        
-        y:200,
+        duration: 2,
+        ease: "expo.out",
+
+        y: 200,
     })
     tl.from("nav", {
         opacity: 0
@@ -52,7 +52,7 @@ function loadingAnimation() {
     tl.from("#page1 h1,#page1 p,#page1 div", {
         opacity: 0,
         stagger: 0.2,
-        duration:0.5,
+        duration: 0.5,
     })
 }
 
@@ -94,20 +94,20 @@ function navAnimation() {
             duration: 0.1,
         })
     })
-    nav.querySelector("button").addEventListener("mouseenter",function(){
-        gsap.to("nav button span",{
-            rotate:360,
-            yoyo:true,
-            duration:1,
-            scale:1.3,
+    nav.querySelector("button").addEventListener("mouseenter", function () {
+        gsap.to("nav button span", {
+            rotate: 360,
+            yoyo: true,
+            duration: 1,
+            scale: 1.3,
         })
     })
-    nav.querySelector("button").addEventListener("mouseleave",function(){
-        gsap.to("nav button span",{
-            rotate:-360,
-            yoyo:true,
-            duration:1,
-            scale:1,
+    nav.querySelector("button").addEventListener("mouseleave", function () {
+        gsap.to("nav button span", {
+            rotate: -360,
+            yoyo: true,
+            duration: 1,
+            scale: 1,
         })
     })
 }
@@ -331,7 +331,7 @@ function page7() {
 
 locomotiveAnimation();
 page8();
-// loadingAnimation();
+loadingAnimation();
 arrowAnimation(".page7-container .elem");
 page7();
 page6Left();
